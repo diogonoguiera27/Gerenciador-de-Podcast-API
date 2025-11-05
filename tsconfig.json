@@ -4,7 +4,7 @@
    
     "module": "commonjs",
     "target": "es6",
-    "types": [],
+    "types": ["node"],
     "outDir": "./dist",
     "esModuleInterop": true,
     
@@ -19,7 +19,6 @@
     
     "strict": true,
     "jsx": "react-jsx",
-    "verbatimModuleSyntax": true,
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",

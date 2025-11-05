@@ -7,11 +7,10 @@
     "doc": "docs"
   },
   "scripts": {
-
-    "start:dev": "tsx src/server.ts",
-    "start:watch": "tsx watch src/server.ts",
+    "start:dev": "tsx --env-file=.env src/server.ts",
+    "start:watch": "tsx --env-file=.env watch src/server.ts",
     "dist": "tsu src",
-    "start:dist": "npm run dist && node/server.js"
+    "start:dist": "npm run dist && --env-file=.env node/server.js"
   },
   "repository": {
     "type": "git",
@@ -20,12 +19,13 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/diogonoguiera27/Gerenciador-de-Podcast-API/issues"
   },
   "homepage": "https://github.com/diogonoguiera27/Gerenciador-de-Podcast-API#readme",
   "devDependencies": {
+    "@types/node": "^24.10.0",
     "tsup": "^8.5.0",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3"
