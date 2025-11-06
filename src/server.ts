@@ -4,11 +4,17 @@ import {getFilterEpisodes, getListEpisodes} from "./controllers/podscasts-contro
 
 const server = http.createServer( async(req:http.IncomingMessage, res: http.ServerResponse)=>{
     
+   
+    const [baseUrl, queryString ] = req.url?.split("?") ?? ["", ""]
+
+    console.log(baseUrl)
+    
+    console.log(queryString)
     // litar podcasts
-    if (req.method === "GET" && req.url === "/api/list"){
+    if (req.method === "GET" && baseUrl === "/api/list"){
      await getListEpisodes(req, res);
     }
-    if(req.method === "GET" && req.url === "/api/episode"){
+    if(req.method === "GET" && baseUrl === "/api/episode"){
         await getFilterEpisodes(req, res)
     }
  }
