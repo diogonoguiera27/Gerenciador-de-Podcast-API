@@ -46,3 +46,5 @@ response:
  }
 ]
 ```
+GET: retorna a lista de episodios baseado em um paramentros enviado pelo cliente do nome do poscast 
+ 
