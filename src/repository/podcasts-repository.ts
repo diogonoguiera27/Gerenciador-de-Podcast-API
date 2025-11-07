@@ -8,7 +8,8 @@ const pathData = path.join(__dirname, "../repository/podcasts.json")
 
 export const repositoryPodcast = async (podcastName?: string): Promise<PodcastModel[]>=> {
 
-    const rawData = fs.readFileSync(pathData, "utf-8")
+    const Language = "utf-8"
+    const rawData = fs.readFileSync(pathData, Language)
     let jsonfile = JSON.parse(rawData)
 
     if(podcastName){
