@@ -1,6 +1,6 @@
 import { IncomingMessage } from "http";
 import { repositoryPodcast } from "../repository/podcasts-repository"
-import { PodcastTrnasferModel } from "../models/filter-podcast-model";
+import { PodcastTrnasferModel } from "../models/PodcastTrnasferModel";
 import { StatusCode } from "../utils/status-code";
 
 
